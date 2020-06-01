@@ -179,6 +179,7 @@ export class FlutterDebugSession extends DartDebugSession {
 
 			if (this.shouldConnectDebugger) {
 				appArgs.push("--start-paused");
+				appArgs.push("--web-enable-expression-evaluation");
 
 				if (args.vmServicePort && appArgs.indexOf("--observatory-port") === -1) {
 					appArgs.push("--observatory-port");
